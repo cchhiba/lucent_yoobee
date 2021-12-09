@@ -1,0 +1,661 @@
+//this is the custom scss file for lucent design iphone X and ipad
+// please note - sass has changed certain spacing of the curcly brackets and certain rgb codes to hex codes in the custom.css file
+// color and font variables
+$font-stack: 'Libre Baskerville', serif;
+$ecru-color: rgb(241, 242, 242);
+$mandarin-color: rgb(252, 184, 73);
+$sky-color: rgb(124, 189, 230);
+$ecru-border: 1px solid rgb(241, 242, 242);
+$cerise-color: rgb(242, 110, 117); // mixins
+@mixin center-element {
+  width: 100%;
+  height: auto;
+}
+@mixin stroke-sky {
+  -webkit-text-stroke-color: rgba(124, 189, 230, 0.8);
+  -moz-text-stroke-color: rgba(124, 189, 230, 0.8);
+  -ms-text-stroke-color: rgba(124, 189, 230, 0.8);
+}
+@mixin stroke-2 {
+  -webkit-text-stroke-width: 2px;
+  -moz-text-stroke-width: 2px;
+  -ms-text-stroke-width: 2px;
+}
+@mixin background-glass {
+  background: rgba(255, 255, 255, 0.20);
+  border: 0.5px solid rgba(241, 242, 242, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+}
+@mixin stroke-ecru {
+  -webkit-text-stroke-color: $ecru-color;
+  -moz-text-stroke-color: $ecru-color;
+  -ms-text-stroke-color: $ecru-color;
+}
+
+html {
+  font-family: $font-stack;
+  font-size: 16px;
+  margin: 0;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+/* form css */
+.form-page {
+  background-image: url("../img/sky-blue-bkground.png");
+  background-color: $sky-color;
+}
+
+.form-container {
+  width: 90%;
+  height: 750px;
+  margin: 8% auto 0;
+  border: 2px solid rgba(241, 242, 242, 0.5);
+}
+
+.form-heading {
+  width: 80%;
+  margin: 10% auto 0;
+}
+
+.form-heading-image {
+  @include center-element;
+  margin: 0 auto;
+}
+
+.form-input-container {
+  width: 85%;
+  height: 400px;
+  margin: 50% auto 0;
+  @include background-glass;
+  border-radius: 30px;
+}
+
+::-webkit-input-placeholder {
+  color: $ecru-color;
+}
+
+::-moz-placeholder {
+  color: $ecru-color;
+}
+
+:-ms-input-placeholder {
+  color: $ecru-color;
+}
+
+:-moz-placeholder {
+  color: $ecru-color;
+}
+
+.form-join-logo {
+  display: block;
+  width: 70%;
+  height: auto;
+  margin: -98px auto 0;
+}
+
+.login-info {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  background: transparent;
+  color: $ecru-color;
+  font-size: 1rem;
+  font-family: $font-stack;
+  border: 0 solid;
+  border-bottom: $ecru-border;
+  margin-bottom: 10%;
+  padding: 0.5rem;
+}
+
+.login-info:focus {
+  background-color: rgba(241, 242, 242, 0.5);
+  color: $cerise-color;
+  border-radius: 10px;
+  outline: none;
+  transition: 400ms background-color ease-in;
+}
+
+.login-info:hover {
+  cursor: text;
+}
+
+.check-box {
+  cursor: pointer;
+  margin-left: 8%;
+}
+
+.ts-cs {
+  font-size: 0.7rem;
+  color: $ecru-color;
+}
+
+.ts-cs span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ts-cs span:hover {
+  color: $cerise-color;
+}
+
+.form-submit-btn {
+  display: block;
+  width: 40%;
+  color: $ecru-color;
+  font-size: 1rem;
+  font-family: $font-stack;
+  background-color: transparent;
+  border: $ecru-border;
+  border-radius: 10px;
+  margin: 10% auto;
+  padding: 0.25rem;
+  transition: 250ms background-color ease-in;
+  text-decoration: none;
+}
+
+.form-submit-btn:hover {
+  background-color: $ecru-color;
+  color: $cerise-color;
+  outline: none;
+  transition: 250ms background-color ease-in;
+}
+/* category css */
+.category-page {
+  background-image: url("../img/mandarin-bkground.png");
+  background-color: $mandarin-color;
+}
+
+.category-container {
+  height: 750px;
+  width: 90%;
+  border: 2px solid rgba(241, 242, 242, 0.5);
+  margin: 8% auto 0;
+}
+
+.groove-logo {
+  display: block;
+  width: 74%;
+  height: auto;
+  margin: 5% auto 0;
+}
+
+.category-header {
+  h3 {
+    display: block;
+    width: 69%;
+    color: $ecru-color;
+    margin: 8% auto 0;
+  }
+}
+
+.button-container {
+  /* position: relative; */
+  display: block;
+  width: 85%;
+  height: 55%;
+  margin: 6% auto 0;
+  overflow: scroll;
+}
+
+.category-button {
+  display: block;
+  width: 90%;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  font-family: $font-stack;
+  margin: 7%;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  @include background-glass;
+  border-radius: 10px;
+}
+
+.category-button:hover {
+  background-color: rgba(241, 242, 242, 0.5);
+}
+
+.category-arrow {
+  position: fixed;
+  bottom: 13%;
+  width: 77%;
+  text-align: center;
+  color: transparent;
+  font-size: 5rem;
+  @include stroke-2;
+  @include stroke-sky;
+}
+
+.category-submit-btn {
+  display: block;
+  width: 40%;
+  color: $ecru-color;
+  font-size: 1rem;
+  font-family: $font-stack;
+  background-color: transparent;
+  border: $ecru-border;
+  border-radius: 10px;
+  margin: 7% auto 0;
+  padding: 0.25rem;
+  transition: 250ms background-color ease-in;
+}
+
+.category-submit-btn:hover {
+  background-color: $ecru-color;
+  color: $sky-color;
+  outline: none;
+  transition: 250ms background-color ease-in;
+}
+/* home css */
+.home-page {
+  background-image: url("../img/ecru-bkground.png");
+  background-color: $ecru-color;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 1%;
+}
+
+.join-image {
+  width: 37%;
+  height: auto;
+  cursor: pointer;
+  margin-left: 65%;
+  margin-top: 30%;
+}
+
+.join-image:hover {
+  transform: scale(1.3);
+  transform: rotateZ(20deg);
+}
+
+.full-image-container {
+  @include center-element;
+}
+
+.full-image {
+  @include center-element;
+}
+
+.full-image:hover {
+  transform: scale(0.8);
+}
+
+.who-image {
+  width: 37%;
+  height: auto;
+  cursor: pointer;
+}
+
+.who-image:hover {
+  transform: scale(1.3);
+  transform: rotateZ(-20deg);
+}
+/* START of card css */
+.card-page {
+  background-image: url("../img/ecru-bkground.png");
+  background-color: $ecru-color;
+  margin: 0;
+}
+
+.card-container {
+  align-content: stretch;
+  overflow: hidden;
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+  height: 100px;
+}
+
+.nav-logo {
+  width: 25%;
+  margin: 5px 10px;
+}
+
+.nav-logo img {
+  @include center-element;
+}
+
+.nav-categories {
+  display: flex;
+  width: 70%;
+  height: 90%;
+  overflow-x: auto;
+}
+
+.nav-categories {
+  h3 {
+    flex-direction: row;
+    border-top: 3px solid rgb(252, 184, 73);
+    padding: 10px 15px 0;
+  }
+}
+
+.nav-categories h3:hover {
+  border-bottom: 3px solid rgb(252, 184, 73);
+  cursor: pointer;
+}
+
+.cards {
+  margin-top: 15%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.cards-container {
+  width: 100%;
+  margin-top: 18%;
+}
+
+.cards-container {
+  img {
+    width: 95%;
+    height: auto;
+  }
+}
+
+.slick-slide > div {
+  transform: scale(.9);
+}
+
+.slick-center > div {
+  transform: scale(1);
+}
+
+.card-footer-container {
+  position: fixed;
+  width: 100%;
+  height: 130px;
+  bottom: 0;
+  background-image: url("../img/mandarin-bkground-footer.png");
+  background-color: $mandarin-color;
+  border-radius: 30px 30px 0 0;
+}
+
+.curved-background {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background-image: url("../img/ecru-bkground.png");
+  background-color: $ecru-color;
+  border-radius: 0 0 20px 20px;
+}
+
+.card-footer-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 47%;
+  border-radius: 10px;
+  @include background-glass;
+  margin: 4% auto 0;
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+  color: transparent;
+  font-size: 2.5rem;
+  @include stroke-2;
+  @include stroke-ecru;
+  margin: 0 5%;
+}
+
+.slick-next:focus:before,
+.slick-next:hover:before,
+.slick-prev:focus:before,
+.slick-prev:hover:before {
+  opacity: 0.6;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  font-family: 'slick';
+  font-size: 2rem;
+  line-height: 1;
+  opacity: 0.4;
+  color: $mandarin-color;
+  --font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: 2%;
+  z-index: 9;
+}
+
+.slick-next {
+  right: 2%;
+}
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots li button:before {
+  font-size: 0.8rem;
+  opacity: 0.25;
+  color: $sky-color;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: $sky-color;
+}
+// start of media query
+@media only screen and (min-width: 768px) {
+  /* form css for ipad: */
+  .form-page {
+    background-size: cover;
+  }
+
+  .form-container {
+    margin-top: 5%;
+    height: 950px;
+  }
+
+  .form-heading {
+    margin-top: 6%;
+    width: 71%;
+  }
+
+  .form-input-container {
+    height: 510px;
+    width: 76%;
+    margin-top: 30%;
+  }
+
+  .form-join-logo {
+    width: 54%;
+    margin-top: -142px;
+  }
+
+  .login-info {
+    margin-bottom: 8%;
+    font-size: 1.2rem;
+  }
+
+  .ts-cs {
+    font-size: 1rem;
+  }
+
+  .form-submit-btn {
+    width: 60%;
+    font-size: 1.2rem;
+    margin: 5% auto;
+    padding: 1rem;
+  }
+  /* home css for ipad */
+  .home-page {
+    background-size: cover;
+  }
+
+  .join-image {
+    width: 27%;
+    margin-left: 75%;
+    margin-top: 4%;
+  }
+
+  .full-image-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .full-image {
+    width: 80%;
+  }
+
+  .who-image {
+    width: 27%;
+    height: auto;
+    margin-left: 4%;
+    margin-bottom: 20%;
+  }
+  /* category css for ipad */
+  .category-page {
+    background-size: cover;
+  }
+
+  .category-container {
+    margin-top: 5%;
+    height: 930px;
+  }
+
+  .groove-logo {
+    width: 56%;
+    margin-top: 2%;
+  }
+
+  .category-header {
+    h3 {
+      width: 45%;
+      font-size: 1.6rem;
+      margin-top: 4%;
+    }
+  }
+
+  .button-container {
+    width: 75%;
+    height: 47%;
+    margin: 5% auto 0;
+  }
+
+  .category-button {
+    font-size: 1.5rem;
+    padding: 1.3rem;
+  }
+
+  .category-arrow {
+    bottom: 13%;
+    width: 67%;
+    font-size: 8rem;
+  }
+
+  .category-submit-btn {
+    width: 50%;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-top: 4%;
+  }
+  /* card css for ipad */
+  .card-page {
+    background-size: cover;
+  }
+
+  .nav-container {
+    display: flex;
+    width: 100%;
+    height: 110px;
+  }
+
+  .nav-logo {
+    width: 25%;
+    margin: 5px 10px;
+  }
+
+  .nav-logo {
+    img {
+      width: 80%;
+    }
+  }
+
+  .nav-categories {
+    height: 110%;
+    font-size: 1.4rem;
+    margin-top: 1%;
+  }
+
+  .nav-categories h3 {
+    padding: 13px 15px;
+  }
+
+  .cards-container {
+    width: 100%;
+    margin-top: 8%;
+  }
+
+  .cards-container {
+    img {
+      width: 100%;
+    }
+  }
+
+  .slick-slide > div {
+    transform: scale(0.9);
+  }
+
+  .slick-center > div {
+    transform: scale(1);
+  }
+
+  .card-footer-container {
+    position: fixed;
+    width: 100%;
+    height: 159px;
+    bottom: 0;
+    background-image: url("../img/mandarin-bkground-footer.png");
+    background-color: $mandarin-color;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .curved-background {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-image: url("../img/ecru-bkground.png");
+    background-color: $ecru-color;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .card-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 47%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.20);
+    border: 0.5px solid rgba(241, 242, 242, 0.18);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+    margin: 3% auto 0;
+  }
+
+  .footer-icon {
+    display: flex;
+    align-items: center;
+    color: transparent;
+    font-size: 4rem;
+    @include stroke-2;
+    @include stroke-ecru;
+    margin: 0 5%;
+  }
+}
